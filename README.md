@@ -29,6 +29,24 @@ npm run serve
 
 Open your browser and navigate to `http://localhost:8080` to start playing.
 
+## Docker
+
+You can also build and run the project using Docker.
+
+### Build the Docker image
+
+```bash
+docker build -t whack-a-mole .
+```
+
+### Run the Docker container
+
+```bash
+docker run -p 8080:8080 whack-a-mole
+```
+
+Open your browser and navigate to `http://localhost:8080` to start playing.
+
 ## How It Works
 
 1. Moles will randomly pop up from their holes.
