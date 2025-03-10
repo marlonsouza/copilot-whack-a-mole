@@ -1,0 +1,48 @@
+.hidden {
+    display: none;
+}
+
+#score-animation {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    color: green;
+    z-index: 1000;
+}
+
+.animate {
+    animation: scoreIncrease 1s ease-out;
+}
+
+@keyframes scoreIncrease {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes superMario {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+.super-mario-animation {
+    animation: superMario 1s infinite;
+}
+
+@keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.jump-animation {
+    animation: jump 0.5s ease-in-out;
+}

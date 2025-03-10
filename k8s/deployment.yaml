@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whack-a-mole-vue
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: whack-a-mole-vue
+  template:
+    metadata:
+      labels:
+        app: whack-a-mole-vue
+    spec:
+      containers:
+      - name: whack-a-mole-vue
+        image: ${{ secrets.DOCKER_USERNAME }}/whack-a-mole-vue:latest
+        ports:
+        - containerPort: 80
